@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Store :: Javascript 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container main">
+        <!-- main container -->
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <a class="navbar-brand" href="#">
+                <img id="storeLogo" src="./images/music_shop.png" alt="Music Store Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    Meni
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Genre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Editor's Pick</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Newsletter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div>
+                    <div>
+                        <a href="#">
+                            Cart (<span id="numOfItems">0</span>)
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">Login / Register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        
+    <div class="container-fluid"> <!--Editor's pick-->
+        <h1>Editor's pick</h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"></th>
+                <th scope="col">Title</th>
+                <th scope="col">Artist</th>
+                <th scope="col">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">*</th>
+                <td>
+                    <img class="ranking-image" src="./images/album_cover/Journey_-_Escape.jpg" 
+                    alt="Journey - Escape">
+                </td>
+                <td>Escape</td>
+                <td>Journey</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th scope="row">-</th>
+                <td>
+                    <img class="ranking-image" src="./images/album_cover/Michael_Jackson_-_Bad.jpg" 
+                    alt="Michael Jackson - Bad">
+                </td>
+                <td>Bad</td>
+                <td>Michael Jackson</td>
+                <td>2</td>
+              </tr>
+              <th scope="row">+</th>
+                <td>
+                    <img class="ranking-image" src="./images/album_cover/Pink_Floyd_-_Wish_You_Were_Here.jpg" 
+                    alt="Pink Floyd - Wish You Were Here">
+                </td>
+                <td>Wish You Were Here</td>
+                <td>Pink Floyd</td>
+                <td>1</td>
+              </tr>
+              <th scope="row">/</th>
+                <td>
+                    <img class="ranking-image" src="./images/album_cover/Genesis_-_Foxtrot.jpg" 
+                    alt="Genesis - Foxtrot">
+                </td>
+                <td>Foxtrot</td>
+                <td>Genesis</td>
+                <td>3</td>
+              </tr>
+              <th scope="row">$</th>
+                <td>
+                    <img class="ranking-image" src="./images/album_cover/Blondie_-_Autoamerican.jpg" 
+                    alt="Blondie - Autoamerican">
+                </td>
+                <td>Autoamerican</td>
+                <td>Blondie</td>
+                <td>4</td>
+              </tr>
+              
+              
+            </tbody>
+          </table>
+
+    </div> <!--end Editor's pick-->
+
+           
+    </div><!-- end main container -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    
+</body>
+
+</html>

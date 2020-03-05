@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Store :: Javascript 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container main">
+        <!-- main container -->
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <a class="navbar-brand" href="#">
+                <img id="storeLogo" src="./images/music_shop.png" alt="Music Store Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    Meni
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Genre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Editor's Pick</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Newsletter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div>
+                    <div>
+                        <a href="#">
+                            Cart (<span id="numOfItems">0</span>)
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">Login / Register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="carousel slide" data-ride="carousel">
+            <!-- carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="./images/carousel/genesis_small.png" />
+                        <source media="(min-width: 601px)" srcset="./images/carousel/genesis.png" />
+                        <img class="img-fluid" src="./images/carousel/genesis.png" />
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="./images/carousel/parkwaydrive_small.png" />
+                        <source media="(min-width: 601px)" srcset="./images/carousel/parkwaydrive.png" />
+                        <img class="img-fluid" src="./images/carousel/parkwaydrive.png" />
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="./images/carousel/adtr_small.png" />
+                        <source media="(min-width: 601px)" srcset="./images/carousel/adtr.png" />
+                        <img class="img-fluid" src="./images/carousel/adtr.png" />
+                    </picture>
+                </div>
+            </div>
+        </div> <!-- end Carousel -->
+
+        <div>
+            <!-- Popular releases -->
+            <h1>Popular releases</h1>
+            <div class="row releases">
+                <!-- releases row -->
+                <div class="col-md-4">
+                    <img class="img-fluid" src="./images/album_cover/Journey_-_Escape.jpg" alt="Journey - Escape" />
+                    <h3>Escape</h3>
+                    <h4>Journey</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, nihil!</p>
+                    <p>Price: <b>$10.99</b></p>
+                    <button class="btn btn-primary" data-title="Escape" data-artist="Journey" data-price="10.99"
+                        data-cover="./images/album_cover/Journey_-_Escape.jpg">Buy</button>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid" src="./images/album_cover/Alcest_-_Souvenirs_D_un_Autre_Monde.jpg"
+                        alt="Alcest - Souvenirs D'un Autre Monde cover" />
+                    <h3>Souvenirs D'un Autre Monde</h3>
+                    <h4>Alcest</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, nihil!</p>
+                    <p>Price: <b>$10.99</b></p>
+                    <button class="btn btn-primary" data-title="Souvenirs D'un Autre Monde" data-artist="Alcest"
+                        data-price="10.99"
+                        data-cover="./images/album_cover/Alcest_-_Souvenirs_D_un_Autre_Monde.jpg">Buy</button>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-fluid" src="./images/album_cover/Tears_For_Fears_-_Songs_From_The_Big_Chair.jpg"
+                        alt="Tears For Fears - Songs from the Big Chair cover" />
+                    <h3>Songs from the Big Chair</h3>
+                    <h4>Tears For Fears</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, nihil!</p>
+                    <p>Price: <b>$10.99</b></p>
+                    <button class="btn btn-primary" data-title="Songs from the Big Chair" data-artist="Tears For Fears"
+                        data-price="10.99"
+                        data-cover="./images/album_cover/Tears_For_Fears_-_Songs_From_The_Big_Chair.jpg">Buy</button>
+                </div>
+            </div> <!-- end releases row -->
+
+        </div> <!-- end Popular releases -->
+
+        <div>
+            <!-- Browse by genre -->
+            <h1>Browse by genre</h1>
+            <div class="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pop">Pop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rock">Rock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jazz">Jazz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#metal">Metal</a>
+                    </li>
+                </ul>
+
+                <div id="pop">
+                    <!-- pop -->
+                    <div class="container-fluid">
+                        <div class="row releases">
+                            <div class="col-md-3">
+                                <img class="img-fluid"
+                                    src="./images/album_cover/Belinda_Carlisle_-_Heaven_On_Earth.jpg"
+                                    alt="Belinda Carlisle - Heaven On Earth cover" />
+                                <h4>Heaven On Earth</h4>
+                                <h5>Belinda Carlisle</h5>
+                                <p>Price: <b>$9.99</b></p>
+                                <button class="btn btn-primary" data-title="Heaven On Earth"
+                                    data-artist="Belinda Carlisle" data-price="9.99"
+                                    data-cover="./images/album_cover/Belinda_Carlisle_-_Heaven_On_Earth.jpg">Buy</button>
+                            </div>
+                            <div class="col-md-3">
+                                    <img class="img-fluid" src="./images/album_cover/Blondie_-_Plastic_Letters.jpg"
+                                        alt="Blondie - Plastic Letters album cover" />
+                                    <h4>Plastic Letters</h4>
+                                    <h5>Blondie</h5>
+                                    <p>Price: <b>$9.99</b></p>
+                                    <button class="btn btn-primary" data-title="Plastic Letters" data-artist="Blondie"
+                                        data-price="9.99"
+                                        data-cover="./images/album_cover/Blondie_-_Plastic_Letters.jpg">Buy</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="img-fluid" src="./images/album_cover/Cyndi_Lauper_-_Shes_So_Unusual.jpg"
+                                        alt="Blondie - Plastic Letters album cover" />
+                                    <h4>She's So Unusual</h4>
+                                    <h5>Cyndi Lauper</h5>
+                                    <p>Price: <b>$10.99</b></p>
+                                    <button class="btn btn-primary" data-title="She's So Unusual" data-artist="Cyndi Lauper"
+                                        data-price="10.99"
+                                        data-cover="./images/album_cover/Cyndi_Lauper_-_Shes_So_Unusual.jpg">Buy</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="img-fluid" src="./images/album_cover/Genesis_-_Invisible_Touch.jpg"
+                                        alt="Genesis - Invisible Touch album cover" />
+                                    <h4>Invisible Touch</h4>
+                                    <h5>Genesis</h5>
+                                    <p>Price: <b>$9.99</b></p>
+                                    <button class="btn btn-primary" 
+                                        data-title="Invisible Touch" 
+                                        data-artist="Genesis"
+                                        data-price="9.99"
+                                        data-cover="./images/album_cover/Genesis_-_Invisible_Touch.jpg">Buy</button>
+                                </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end pop -->
+                <div id="rock">
+                    <!-- rock -->
+                    2
+                </div> <!-- end rock -->
+                <div id="jazz">
+                    <!-- jazz -->
+                    3
+                </div> <!-- end jazz -->
+                <div id="metal">
+                    <!-- metal -->
+                    4
+                </div> <!-- end metal -->
+
+            </div>
+        </div> <!-- end browse -->
+
+    </div><!-- end main container -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/jquery.tabslet.js/1.7.3/jquery.tabslet.min.js"></script>
+    <script>
+        $(".tabs").tabslet();
+    </script>
+</body>
+
+</html>
